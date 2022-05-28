@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1097987582233",
+    "project_id": "pharmahub-adfb3",
+    "storage_bucket": "pharmahub-adfb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1097987582233:android:28bc53adf86516eaff3d88",
+        "android_client_info": {
+          "package_name": "com.philix.pharmahub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1097987582233-79g6unvncsacrbmnl7hcbflhlpvj4pbj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWlHnsXRKMh3auHFYIfzYmf4zjOXqDUXY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1097987582233-79g6unvncsacrbmnl7hcbflhlpvj4pbj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
