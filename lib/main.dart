@@ -1,6 +1,7 @@
 import 'dart:io';
 // import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:pharmahub/core/app_widget.dart';
 // import 'package:flutter/services.dart';
 // import 'package:hive_flutter/hive_flutter.dart';
 // import 'package:path_provider/path_provider.dart';
@@ -26,24 +27,6 @@ void main() async {
 //     DeviceOrientation.portraitDown,
 //   ]);
 
-  runApp(MyApp());
+  runApp(AppWidget());
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
-      ),
-    );
-  }
-}
