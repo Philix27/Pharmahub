@@ -16,7 +16,7 @@ class ActivityPage extends StatelessWidget {
         elevation: 0,
         title: Text(
           "Activity",
-          style: Styles.headlineText2!.copyWith(
+          style: Styles.headlineText1!.copyWith(
             fontWeight: FontWeight.w600,
           ),
         ),

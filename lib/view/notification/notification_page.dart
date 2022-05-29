@@ -16,12 +16,10 @@ class NotificationPage extends StatelessWidget {
         elevation: 0,
         title: Text(
           "Notifications",
-          style: Styles.headlineText2!.copyWith(
+          style: Styles.headlineText1!.copyWith(
             fontWeight: FontWeight.w600,
           ),
         ),
-       
-      
       ),
       body: ListView(
         controller: controller,

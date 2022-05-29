@@ -18,12 +18,16 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         bottomOpacity: 0,
         elevation: 0,
-        centerTitle: true,
+        // centerTitle: true,
         title: Text(
           "Home",
-          style: Styles.headlineText2!.copyWith(
+          style: Styles.headlineText1!.copyWith(
             fontWeight: FontWeight.w600,
           ),
+        ),
+        leading: IconButton(
+          onPressed: () => Get.to(() => const ProfilePage()),
+          icon: const Icon(Icons.person_outline),
         ),
       ),
       floatingActionButton: MyWidgets.fab(

@@ -4,7 +4,7 @@ import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:pharmahub/view/activity/activity_page.dart';
 import 'package:pharmahub/core/theme/styles.dart';
 import 'package:pharmahub/view/home/home_page.dart';
-import 'package:pharmahub/notification_page.dart';
+import 'package:pharmahub/view/notification/notification_page.dart';
 import 'package:pharmahub/view/spaces/spaces_page.dart';
 
 class AppScaffold extends StatefulWidget {
