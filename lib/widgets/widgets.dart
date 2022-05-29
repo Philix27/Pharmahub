@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:pharmahub/core/theme/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+// import 'package:fluttertoast/fluttertoast.dart';
 
 class MyWidgets {
   static Widget raisedButton({
@@ -245,14 +245,14 @@ class MyWidgets {
     );
   }
 
-  static dynamic toast(String msg) => Fluttertoast.showToast(
-      msg: msg,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.CENTER,
-      timeInSecForIosWeb: 2,
-      backgroundColor: Styles.primaryColor,
-      textColor: Styles.canvasColor,
-      fontSize: 14.0);
+  // static dynamic toast(String msg) => Fluttertoast.showToast(
+  //     msg: msg,
+  //     toastLength: Toast.LENGTH_SHORT,
+  //     gravity: ToastGravity.CENTER,
+  //     timeInSecForIosWeb: 2,
+  //     backgroundColor: Styles.primaryColor,
+  //     textColor: Styles.canvasColor,
+  //     fontSize: 14.0);
 
   static void showCupertino(
     BuildContext context, {

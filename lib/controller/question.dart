@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
-import 'package:rxedu/api/question.dart';
-import 'package:rxedu/models/mcq_category.dart';
-import 'package:rxedu/models/question.dart';
+import 'package:pharmahub/api/question.dart';
+import 'package:pharmahub/models/question.dart';
 
 class QuestionDb extends GetxController {
   final QuestionApi qAPI = QuestionApi();
@@ -25,39 +24,39 @@ class QuestionDb extends GetxController {
     return _questions;
   }
 
-  Future<List<MCQCategory>> getCategories() async {
-    List<MCQCategory> _categories = [];
-    try {
-      var listOfMaps = await qAPI.getAll();
-      for (var i in listOfMaps) {
-        if (!_categories.contains(i['category'])) {
-          _categories.add(MCQCategory.fromMap(i));
-        }
-      }
-      print(_categories);
-    } catch (e) {
-      print(e);
-    }
+  // Future<List<MCQCategory>> getCategories() async {
+  //   List<MCQCategory> _categories = [];
+  //   try {
+  //     var listOfMaps = await qAPI.getAll();
+  //     for (var i in listOfMaps) {
+  //       if (!_categories.contains(i['category'])) {
+  //         _categories.add(MCQCategory.fromMap(i));
+  //       }
+  //     }
+  //     print(_categories);
+  //   } catch (e) {
+  //     print(e);
+  //   }
 
-    return _categories;
-  }
+  //   return _categories;
+  // }
 
-  Future<List<MCQCategory>> getMCQCategories() async {
-    List<MCQCategory> _categories = [];
-    try {
-      var listOfMaps = await qAPI.getAllCategory();
-      for (var i in listOfMaps) {
-        if (!_categories.contains(i['department'])) {
-          _categories.add(MCQCategory.fromMap(i));
-        }
-      }
-      print(_categories);
-    } catch (e) {
-      print(e);
-    }
+  // Future<List<MCQCategory>> getMCQCategories() async {
+  //   List<MCQCategory> _categories = [];
+  //   try {
+  //     var listOfMaps = await qAPI.getAllCategory();
+  //     for (var i in listOfMaps) {
+  //       if (!_categories.contains(i['department'])) {
+  //         _categories.add(MCQCategory.fromMap(i));
+  //       }
+  //     }
+  //     print(_categories);
+  //   } catch (e) {
+  //     print(e);
+  //   }
 
-    return _categories;
-  }
+  //   return _categories;
+  // }
 
   Future<List<Question>> getFor(String category) async {
     List<Question> _questions = [];

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/route_manager.dart';
 import 'package:pharmahub/core/theme/styles.dart';
+import 'package:pharmahub/view/home/add_post.dart';
 import 'package:pharmahub/view/profile/profile_page.dart';
 import 'package:pharmahub/widgets/widgets.dart';
 
@@ -24,13 +25,11 @@ class HomePage extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        leading: IconButton(
-          onPressed: () => Get.to(() => const ProfilePage()),
-          icon: const Icon(Icons.person_outline),
-        ),
       ),
       floatingActionButton: MyWidgets.fab(
-        onTap: () {},
+        onTap: () => Get.to(() => const SendPostPage(
+              category: 'Question',
+            )),
         icon: Icons.add,
       ),
       body: ListView(

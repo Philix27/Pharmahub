@@ -1,7 +1,7 @@
 // import 'package:dio/dio.dart';
-import 'package:rxedu/api/notes.dart';
-import 'package:rxedu/models/article.dart';
-import 'package:rxedu/models/article_category.dart';
+import 'package:pharmahub/api/notes.dart';
+import 'package:pharmahub/models/article.dart';
+import 'package:pharmahub/models/article_category.dart';
 
 class ArticleDb {
   final NotesApi notesAPI = NotesApi();

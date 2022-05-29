@@ -49,7 +49,7 @@ class _AppScaffoldState extends State<AppScaffold> {
           animateTabTransition: true,
           curve: Curves.ease,
           duration: Duration(milliseconds: 200)),
-      navBarStyle: NavBarStyle.style1,
+      navBarStyle: NavBarStyle.style12,
     );
   }
 }

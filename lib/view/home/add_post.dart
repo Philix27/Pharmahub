@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:pharmahub/core/theme/styles.dart';
 import 'package:pharmahub/models/question.dart';
-import 'package:pharmahub/view/widgets/widgets.dart';
+import 'package:pharmahub/widgets/widgets.dart';
 
-class AddMcqPage extends StatefulWidget {
-  const AddMcqPage({
+class SendPostPage extends StatefulWidget {
+  const SendPostPage({
     Key? key,
     required this.category,
   }) : super(key: key);
   final String category;
   @override
-  _AddMcqPageState createState() => _AddMcqPageState();
+  _SendPostPageState createState() => _SendPostPageState();
 }
 
-class _AddMcqPageState extends State<AddMcqPage> {
+class _SendPostPageState extends State<SendPostPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-  QuestionController questionController = QuestionController();
+  // QuestionController questionController = QuestionController();
 
   TextEditingController readerIndex = TextEditingController();
   TextEditingController question = TextEditingController();
@@ -103,43 +103,6 @@ class _AddMcqPageState extends State<AddMcqPage> {
                 ),
                 const SizedBox(height: 20),
                 TextFormField(
-                  controller: option2,
-                  maxLines: 20,
-                  minLines: 4,
-                  style: Styles.bodyText2,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Cannot be empty';
-                    } else {
-                      return null;
-                    }
-                  },
-                  decoration: const InputDecoration(
-                    hintText: 'Option2',
-                  ),
-                ),
-                const SizedBox(height: 20),
-                TextFormField(
-                  controller: option3,
-                  maxLines: 20,
-                  minLines: 4,
-                  style: Styles.bodyText2,
-                  decoration: const InputDecoration(
-                    hintText: 'Option3',
-                  ),
-                ),
-                const SizedBox(height: 20),
-                TextFormField(
-                  controller: option4,
-                  maxLines: 20,
-                  minLines: 4,
-                  style: Styles.bodyText2,
-                  decoration: const InputDecoration(
-                    hintText: 'Option4',
-                  ),
-                ),
-                const SizedBox(height: 20),
-                TextFormField(
                   controller: answerIndex,
                   maxLength: 7,
                   keyboardType: TextInputType.number,
@@ -166,23 +129,23 @@ class _AddMcqPageState extends State<AddMcqPage> {
                     if (_formKey.currentState!.validate()) {
                       _formKey.currentState!.save();
 
-                      questionController.addMcq(
-                        Question(
-                          id: DateTime.now().millisecondsSinceEpoch.toString(),
-                          answer: int.parse(answerIndex.text.trim()),
-                          category: widget.category,
-                          explain: "",
-                          question: question.text.trim(),
-                          options: [
-                            option1.text.trim(),
-                            option2.text.trim(),
-                            if (option3.text.trim().isNotEmpty)
-                              option3.text.trim(),
-                            if (option4.text.trim().isNotEmpty)
-                              option4.text.trim(),
-                          ],
-                        ),
-                      );
+                      // questionController.addMcq(
+                      //   Question(
+                      //     id: DateTime.now().millisecondsSinceEpoch.toString(),
+                      //     answer: int.parse(answerIndex.text.trim()),
+                      //     category: widget.category,
+                      //     explain: "",
+                      //     question: question.text.trim(),
+                      //     options: [
+                      //       option1.text.trim(),
+                      //       option2.text.trim(),
+                      //       if (option3.text.trim().isNotEmpty)
+                      //         option3.text.trim(),
+                      //       if (option4.text.trim().isNotEmpty)
+                      //         option4.text.trim(),
+                      //     ],
+                      //   ),
+                      // );
 
                       clearAll();
                     }

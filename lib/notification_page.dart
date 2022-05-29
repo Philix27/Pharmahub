@@ -14,17 +14,13 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(
         bottomOpacity: 0,
         elevation: 0,
-        centerTitle: true,
         title: Text(
           "Notifications",
           style: Styles.headlineText2!.copyWith(
             fontWeight: FontWeight.w600,
           ),
         ),
-        leading: IconButton(
-          onPressed: () {},
-          icon: const Icon(Icons.person_outline),
-        ),
+       
       
       ),
       body: ListView(
