@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/route_manager.dart';
 import 'package:pharmahub/core/theme/styles.dart';
+import 'package:pharmahub/view/profile/profile_page.dart';
+import 'package:pharmahub/widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   final ScrollController controller = ScrollController();
@@ -22,10 +25,13 @@ class HomePage extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () => Get.to(() => const ProfilePage()),
           icon: const Icon(Icons.person_outline),
         ),
-       
+      ),
+      floatingActionButton: MyWidgets.fab(
+        onTap: () {},
+        icon: Icons.add,
       ),
       body: ListView(
         controller: controller,
