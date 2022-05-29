@@ -25,12 +25,12 @@ class ActivityPage extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(Icons.person_outline),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.payment),
-          ),
-        ],
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {},
+        //     icon: const Icon(Icons.payment),
+        //   ),
+        // ],
       ),
       body: ListView(
         controller: controller,

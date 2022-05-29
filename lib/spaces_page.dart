@@ -16,7 +16,7 @@ class SpacesPage extends StatelessWidget {
         elevation: 0,
         centerTitle: true,
         title: Text(
-        "Spaces",
+          "Spaces",
           style: Styles.headlineText2!.copyWith(
             fontWeight: FontWeight.w600,
           ),
@@ -25,12 +25,6 @@ class SpacesPage extends StatelessWidget {
           onPressed: () {},
           icon: const Icon(Icons.person_outline),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.payment),
-          ),
-        ],
       ),
       body: ListView(
         controller: controller,

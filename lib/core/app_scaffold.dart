@@ -67,7 +67,7 @@ List<PersistentBottomNavBarItem> _navBarsItems() {
   return <PersistentBottomNavBarItem>[
     item(CupertinoIcons.home, ("Home")),
     item(Icons.group, ("Spaces")),
-    item(Icons.chat_bubble, ("Answers")),
+    item(Icons.chat_bubble, ("Activities")),
     item(Icons.notifications, ("Notification")),
   ];
 }
