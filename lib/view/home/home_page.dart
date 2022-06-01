@@ -31,14 +31,35 @@ class HomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: MyWidgets.fab(
-        onTap: () => Get.to(() => const SendPostPage(
-              category: 'Question',
-            )),
+        onTap: () => Get.to(() => const SendPostPage(category: 'Question')),
         icon: Icons.add,
       ),
       body: ListView(
         controller: controller,
-        children: const [],
+        children: [
+          Card(
+            color: Colors.white,
+            child: Column(
+              children: [
+                const ListTile(
+                  title: Text('Username'),
+                  subtitle: Text('bio'),
+                  isThreeLine: true,
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.greenAccent,
+                    radius: 20,
+                    // backgroundImage: AssetImage('assets/calls.jpg'),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Text('Username'),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

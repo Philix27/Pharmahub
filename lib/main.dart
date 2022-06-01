@@ -1,4 +1,4 @@
-import 'dart:io';
+// import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:pharmahub/core/app_widget.dart';
 // import 'package:firebase_core/firebase_core.dart';
@@ -14,19 +14,18 @@ void main() async {
 //       await getApplicationDocumentsDirectory();
 
 // //? SystemChrome
-//   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-//     statusBarColor: Colors.grey[200],
-//     statusBarIconBrightness: Brightness.light,
-//     statusBarBrightness: Brightness.light,
-//   ));
+  // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+  //   statusBarColor: Colors.grey[200],
+  //   statusBarIconBrightness: Brightness.light,
+  //   statusBarBrightness: Brightness.light,
+  // ));
 
-//   SystemChrome.setEnabledSystemUIOverlays(
-//       [SystemUiOverlay.top, SystemUiOverlay.bottom]);
-//   SystemChrome.setPreferredOrientations([
-//     DeviceOrientation.portraitUp,
-//     DeviceOrientation.portraitDown,
-//   ]);
+  // SystemChrome.setEnabledSystemUIOverlays(
+  //     [SystemUiOverlay.top, SystemUiOverlay.bottom]);
+  // SystemChrome.setPreferredOrientations([
+  //   DeviceOrientation.portraitUp,
+  //   DeviceOrientation.portraitDown,
+  // ]);
 
   runApp(const AppWidget());
 }
-

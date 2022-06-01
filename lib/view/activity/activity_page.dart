@@ -23,7 +23,18 @@ class ActivityPage extends StatelessWidget {
       ),
       body: ListView(
         controller: controller,
-        children: const [],
+        children: [
+          Container(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text('Username'),
+                  subtitle: Text('bio'),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

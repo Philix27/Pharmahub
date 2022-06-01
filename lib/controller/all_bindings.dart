@@ -1,7 +1,7 @@
 // import 'package:rxedu/controller/user_controller.dart';
 import 'package:get/get.dart';
 import 'package:get/get_instance/get_instance.dart';
-import 'package:pharmahub/controller/auth_controller.dart';
+// import 'package:pharmahub/controller/auth_controller.dart';
 
 class AllControllerBinding implements Bindings {
   @override

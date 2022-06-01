@@ -1,28 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:pharmahub/core/theme/styles.dart';
+import 'package:pharmahub/models/question.dart';
 import 'package:pharmahub/widgets/widgets.dart';
 
-class SendPostPage extends StatefulWidget {
-  const SendPostPage({
+class SendQuestionPage extends StatefulWidget {
+  const SendQuestionPage({
     Key? key,
     required this.category,
   }) : super(key: key);
   final String category;
   @override
-  _SendPostPageState createState() => _SendPostPageState();
+  _SendQuestionPageState createState() => _SendQuestionPageState();
 }
 
-class _SendPostPageState extends State<SendPostPage> {
+class _SendQuestionPageState extends State<SendQuestionPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   // QuestionController questionController = QuestionController();
 
-  TextEditingController title = TextEditingController();
-  TextEditingController content = TextEditingController();
+  TextEditingController question = TextEditingController();
 
   clearAll() {
-    title.clear();
-    content.clear();
-   
+    question.clear();
   }
 
   @override
@@ -33,8 +31,8 @@ class _SendPostPageState extends State<SendPostPage> {
         elevation: 0,
         backgroundColor: Styles.backgroundColor,
         title: Text(
-          "Make a post",
-          style: Styles.headlineText1
+          "Ask a question",
+          style: Styles.headlineText1,
         ),
       ),
       body: SingleChildScrollView(
@@ -44,10 +42,9 @@ class _SendPostPageState extends State<SendPostPage> {
             padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
             child: Column(
               children: [
-               
                 const SizedBox(height: 20),
                 TextFormField(
-                  controller: title,
+                  controller: question,
                   maxLines: 20,
                   minLines: 4,
                   style: Styles.bodyText2,
@@ -63,24 +60,6 @@ class _SendPostPageState extends State<SendPostPage> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                TextFormField(
-                  controller: content,
-                  maxLines: 60,
-                  minLines: 20,
-                  style: Styles.bodyText2,
-                  validator: (value) {
-                    if (value!.isEmpty) {
-                      return 'Please type an option';
-                    } else {
-                      return null;
-                    }
-                  },
-                  decoration: const InputDecoration(
-                    hintText: 'Option1',
-                  ),
-                ),
-                const SizedBox(height: 20),
-               
                 MyWidgets.raisedButton(
                   title: 'Upload',
                   onPressed: () {
